@@ -1,0 +1,146 @@
+body{
+    margin: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: navy;
+    color: mintcream;
+    padding-left: 1em;
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+.active {
+    background-color: limegreen;
+  }
+header nav ul{
+    display: inline-flex;
+}
+header nav li{
+    list-style: none;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: 2px solid white;
+}
+header  nav li a{
+    text-decoration: none;
+    color: white;
+}
+.cuerpo{
+    box-sizing: border-box;
+    text-align: center;
+}
+.cuerpo img{
+    width: 95vw;
+}
+form{
+    background-color: darkcyan ;
+    display: block;
+    font-size: 18px;
+    border: 2px solid black;
+    text-align: center;
+}
+form input{
+    height: 20px;
+    color: white;
+}
+.bloque_de_busqueda{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1em;
+}
+.bloque_de_busqueda input{
+    width: 16em;
+    background-color: royalblue;
+
+}
+.opcion{
+    background-color: royalblue;
+    border: 2px solid black;
+    margin-bottom: 1em;
+}
+.opcion label{
+    margin-left: 10px;
+}
+.busq{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+#boton_form{
+    font-size: 18px;
+    height: 40px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    background-color: lime;
+    color: black;
+}
+table{
+    margin-top: 1em;
+    width: 100vw;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+th,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    background-color: gold;
+    text-align: center;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid black;
+    margin: 0em;
+}
+footer h2{
+    width: 100vw;
+
+    margin: 0em;
+    font-size: 20px;
+    background-color: lightgreen;
+}
+footer th,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    background-color: lime;
+    text-align: center;
+}
+#tabla_favoritos{
+    width: 100vw;
+    margin: 0em;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+@media (min-width:600px){
+    .cuerpo img{
+        width: 65vw;
+    }
+}
+@media (min-width:840px){
+    .busq{
+        display: inline-flex;
+    }
+    .bloque_de_busqueda input{
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    .cuerpo img{
+        width: 55vw;
+    }
+}
+@media (min-width:1080px){
+
+
+    .cuerpo img{
+        width: 40vw;
+    }
+}
+
+
+

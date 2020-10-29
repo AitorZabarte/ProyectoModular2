@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busqueda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Informacion De Países</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><strong>Pagina Principal</strong></a></li>
+                <li class='active'><a href="busqueda.html"><strong>Busqueda</strong></a></li>
+                <li><a href="acerca_de.html"><strong>Acerca De</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="">
+            <p> <strong> Elige la opcion para buscar lo escrito abajo</strong></p>
+            <div class="opcion">
+                <label for="nombre_radio">Nombre</label>
+                <input type="radio" name="radio" id="nombre_radio" value="Nombre">
+                <label for="capital_radio">Capital</label>
+                <input type="radio" name="radio" id="capital_radio" value="Capital">
+                <label for="nombre_completo_radio">Nombre Completo</label>
+                <input type="radio" name="radio" id="nombre_completo_radio" value="Nombre Completo">
+                <label for="region_radio">Continente</label>
+                <input type="radio" name="radio" id="region_radio" value="Region">
+            </div>
+            <p> <strong>Este buscador solo reconoce los nombres en inglés o en el idioma nativo del país</strong></p>
+            <div class=bloque_de_busqueda>
+                <div class="columna_uno">
+                    <div class="busq">
+                        <label for="Nombre">Nombre del país</label>
+                        <input type="text" name="Nombre" id="nombre">
+                    </div>
+                    <div class="busq">
+                        <label for="Capital">Capital del país</label>
+                        <input type="text" name="Capital" id="capital">
+                    </div>
+                </div>
+                <div class="columna_dos">
+                    <div class="busq">
+                        <label for="Nombre_completo">Nombre completo del país</label>
+                        <input type="text" name="Nombre_completo" id="nombre_completo">
+                    </div>
+                    <div class="busq">
+                        <label for="Region">Nombre completo del continente</label>
+                        <input type="text" name="Region" id="region">
+                    </div>
+                </div>
+            </div>
+            <input type="button" value="Buscar" id=boton_form>
+        </form>  
+        <table id='table'>
+            <tr>
+                <th>Pais</th>
+                <th>Capital</th>
+                <th>Region</th>
+                <th>Bandera</th>
+                <th>Idioma</th>
+                <th>Moneda</th>
+                <th>Favoritos</th>
+            </tr>
+        </table>
+    </main>
+    <table hidden id="tabla_favoritos">
+        <tr>
+            <th>País</th>
+            <th>Capital</th>
+            <th>Continente</th>
+            <th>Idioma</th>
+            <th>Moneda</th>
+        </tr>
+    </table>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

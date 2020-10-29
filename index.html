@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina principal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Busqueda Informativa De Países</h1>
+        <nav>
+            <ul>
+                <li class='active'><a href="index.html"><strong>Pagina Principal</strong></a></li>
+                <li><a href="busqueda.html"><strong>Busqueda</strong></a></li>
+                <li><a href="acerca_de.html"><strong>Acerca De</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class='cuerpo'>
+        <p><strong>En esta web te proporcionamos la informacion básica de los países del mundo</strong></p>
+        <img src="mapa.jpg" alt="">
+    </div>
+    <footer>
+        <table id='tabla_favoritos'>
+            <h2><strong>FAVORITOS</strong></h2>
+            <tr>
+                <th>País</th>
+                <th>Capital</th>
+                <th>Continente</th>
+                <th>Idioma</th>
+                <th>Moneda</th>
+            </tr>
+        </table>
+    </footer>
+    <input hidden type="button" value="Buscar" id=boton_form>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

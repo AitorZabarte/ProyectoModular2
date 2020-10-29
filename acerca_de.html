@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcercaDe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Informacion De Países</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><strong>Pagina Principal</strong></a></li>
+                <li><a href="busqueda.html"><strong>Busqueda</strong></a></li>
+                <li class='active'><a href="acerca_de.html"><strong>Acerca De</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+    <footer>
+        <p><strong>He elegido hacer la web sobre geografia porque la api que he utilizado era facil de utilizar, clara y rápida</strong> </p>
+
+        <table id='tabla_favoritos'>
+            <h2><strong>FAVORITOS</strong></h2>
+            <tr>
+                <th>País</th>
+                <th>Capital</th>
+                <th>Continente</th>
+                <th>Idioma</th>
+                <th>Moneda</th>
+            </tr>
+        </table>
+    </footer>
+    <input hidden type="button" value="Buscar" id=boton_form>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
