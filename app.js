@@ -12,9 +12,6 @@ function search(){
     let string_api
     if(nombre!=""&&nombre_radio.checked!=false||capital!=""&&capital_radio.checked!=false||nombre_completo!=""&&nombre_completo_radio.checked!=false||region!=""&&region_radio.checked!=false){
         while( table.rows.length > 1) table.rows[1].remove();
-        for(var g=0;g<preferencias_del_usuario.length;g++){
-            console.log(preferencias_del_usuario[g][2])
-        }
         if(nombre_radio.checked==true&&nombre!=""){
             string_api=`name/${nombre}`
         }
@@ -51,7 +48,7 @@ function search(){
                 let pais_idioma=response.data[i].languages[0].name
                 bandera_imagen.src=pais_bandera
                 Favoritos.setAttribute('id',`${i}`)
-                Favoritos.addEventListener('change',favo)
+                Favoritos.addEventListener('change',Intro_favorito)
                 columna_uno.appendChild(document.createTextNode(`${pais_nombre}`))
                 columna_dos.appendChild(document.createTextNode(`${pais_capital}`))
                 columna_tres.appendChild(document.createTextNode(`${pais_region}`))
@@ -74,7 +71,6 @@ function search(){
             }
         })
     .catch(function (error) {
-    console.log(error);
     alert('La palabra introducida en la categoria seleccionada no existe')
      })       
   }
@@ -82,7 +78,7 @@ function search(){
     alert('No has especificado el campo que quieres buscar o no has escrito nada')
   }
 }
-function favo() {
+function Intro_favorito() {
     var pais_repetido=false 
             for(let j=0;j<preferencias_del_usuario.length;j++)
             {
@@ -99,13 +95,15 @@ function favo() {
                         console.log('pais repetido')
                     }
                     else{
-                        localStorage.setItem(`${localStorage.length}`,JSON.stringify({Nombre: `${preferencias_del_usuario[j][0]}`,Capital: `${preferencias_del_usuario[j][1]}`,Continente: `${preferencias_del_usuario[j][3]}`,Idioma: `${preferencias_del_usuario[j][4]}`,Moneda: `${preferencias_del_usuario[j][1]}`}))
+                        localStorage.setItem(`${localStorage.length}`,JSON.stringify({Nombre: `${preferencias_del_usuario[j][0]}`,Capital: `${preferencias_del_usuario[j][1]}`,Continente: `${preferencias_del_usuario[j][3]}`,Idioma: `${preferencias_del_usuario[j][4]}`,Moneda: `${preferencias_del_usuario[j][5]}`}))
                     }
-                    document.getElementById(preferencias_del_usuario[j][2]).checked=false
+                    setTimeout(function(){ document.getElementById(preferencias_del_usuario[j][2]).checked=false},300)
                 }     
             }
 }
 window.onload=function(){
+    let boton_borrar = document.getElementById('borrar');
+    boton_borrar.addEventListener('click', function(){localStorage.clear()});
     for(let k=0;k<localStorage.length;k++){
         var tabla_favoritos=document.getElementById('tabla_favoritos')
         let fila_favoritos =document.createElement('tr')

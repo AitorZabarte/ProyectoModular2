@@ -6,7 +6,7 @@
     <title>Pagina principal</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="cuerpo_color">
     <header>
         <h1>Busqueda Informativa De Países</h1>
         <nav>
@@ -19,19 +19,22 @@
     </header>
     <div class='cuerpo'>
         <p><strong>En esta web te proporcionamos la informacion básica de los países del mundo</strong></p>
-        <img src="mapa.jpg" alt="">
+        <img src="mapa.jpg" alt="mapa">
     </div>
     <footer>
+    <h2><strong>FAVORITOS</strong></h2>
+    <div class="tabla_responsiva">
         <table id='tabla_favoritos'>
-            <h2><strong>FAVORITOS</strong></h2>
             <tr>
                 <th>País</th>
                 <th>Capital</th>
                 <th>Continente</th>
                 <th>Idioma</th>
                 <th>Moneda</th>
+                <th><button id="borrar">Borrar lista de favoritos</button></th>
             </tr>
         </table>
+    </div>
     </footer>
     <input hidden type="button" value="Buscar" id=boton_form>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

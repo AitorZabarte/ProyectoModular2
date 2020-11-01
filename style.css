@@ -1,11 +1,17 @@
 body{
     margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
 }
+.cuerpo_color{
+    background-image:radial-gradient(circle,deepskyblue,snow);
+}
+
 header{
     display: flex;
     justify-content: space-between;
     background-color: navy;
-    color: mintcream;
+    color: white;
     padding-left: 1em;
 }
 nav{
@@ -16,12 +22,12 @@ nav{
     background-color: limegreen;
   }
 header nav ul{
-    display: inline-flex;
+    display: flex;
 }
 header nav li{
     list-style: none;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 5px;
+    padding-right: 5px;
     border: 2px solid white;
 }
 header  nav li a{
@@ -33,7 +39,8 @@ header  nav li a{
     text-align: center;
 }
 .cuerpo img{
-    width: 95vw;
+    width: 65vw;
+    margin-bottom: 5px;
 }
 form{
     background-color: darkcyan ;
@@ -41,12 +48,14 @@ form{
     font-size: 18px;
     border: 2px solid black;
     text-align: center;
+    padding-bottom: 1em;
 }
 form input{
     height: 20px;
     color: white;
 }
 .bloque_de_busqueda{
+    width: 100vw;
     align-items: center;
     display: flex;
     justify-content: space-around;
@@ -63,29 +72,29 @@ form input{
     margin-bottom: 1em;
 }
 .opcion label{
-    margin-left: 10px;
+    margin-left: 4px;
 }
 .busq{
     display: flex;
-    box-sizing: border-box;
     flex-direction: column;
 }
 
 #boton_form{
     font-size: 18px;
     height: 40px;
+    width: auto;
     margin-top: 0;
     margin-bottom: 5px;
     background-color: lime;
     color: black;
 }
 table{
-    margin-top: 1em;
-    width: 100vw;
+    width: 100%;
     border: 2px solid black;
     border-collapse: collapse;
+    margin-right: 0em;
 }
-th,td{
+main th,main td{
     border: 2px solid black;
     border-collapse: collapse;
     background-color: gold;
@@ -99,31 +108,43 @@ footer{
     margin: 0em;
 }
 footer h2{
-    width: 100vw;
-
     margin: 0em;
     font-size: 20px;
     background-color: lightgreen;
 }
-footer th,td{
+footer th,footer td{
     border: 2px solid black;
     border-collapse: collapse;
     background-color: lime;
     text-align: center;
 }
 #tabla_favoritos{
-    width: 100vw;
+    width: 100%;
     margin: 0em;
     border: 2px solid black;
     border-collapse: collapse;
 }
 .tabla_responsiva{
-    max-height: 80px;
-    overflow: auto;
+    overflow-y: scroll;
+    overflow-x: unset;
+    max-height: 150px;
+}
+.tabla_responsiva_busqueda{
+    overflow-y: auto;
+    overflow-x: unset;
+    max-height: 380px;
+}
+.acerca_de_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.acerca_de_main img{
+    height: 100px;
 }
 @media (min-width:600px){
     .cuerpo img{
-        width: 65vw;
+        width: 52vw;
     }
 }
 @media (min-width:840px){
@@ -135,14 +156,27 @@ footer th,td{
         margin-right: 2em;
     }
     .cuerpo img{
-        width: 55vw;
+        width: 40vw;
+    }
+    .acerca_de_main{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 4em;
+        margin-bottom: 4em;
+    }
+    .acerca_de_main img{
+        height: 250px;
     }
 }
-@media (min-width:1080px){
-
-
+@media (min-width:1000px){
     .cuerpo img{
-        width: 40vw;
+        width: 32vw;
+    }
+}
+@media (min-width:1280px){
+    .cuerpo img{
+        width: 28.5vw;
     }
 }
 

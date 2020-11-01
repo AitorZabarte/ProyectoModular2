@@ -6,9 +6,9 @@
     <title>Busqueda</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="cuerpo_color">
     <header>
-        <h1>Informacion De Países</h1>
+        <h1>Realizar la busqueda</h1>
         <nav>
             <ul>
                 <li><a href="index.html"><strong>Pagina Principal</strong></a></li>
@@ -48,13 +48,14 @@
                         <input type="text" name="Nombre_completo" id="nombre_completo">
                     </div>
                     <div class="busq">
-                        <label for="Region">Nombre completo del continente</label>
+                        <label for="Region">Nombre completo continente</label>
                         <input type="text" name="Region" id="region">
                     </div>
                 </div>
             </div>
             <input type="button" value="Buscar" id=boton_form>
-        </form>  
+        </form>
+        <div class="tabla_responsiva_busqueda">
         <table id='table'>
             <tr>
                 <th>Pais</th>
@@ -66,6 +67,7 @@
                 <th>Favoritos</th>
             </tr>
         </table>
+    </div>
     </main>
     <table hidden id="tabla_favoritos">
         <tr>
